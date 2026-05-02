@@ -68,3 +68,42 @@ If you want to learn more about building native executables, please consult <htt
 Easily start your REST Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+
+## Generated CRUD API
+
+This project now provides a simple CRUD API for managing persons backed by MongoDB.
+
+Base path: /api/persons
+
+Endpoints:
+
+- GET /api/persons — list all persons
+- GET /api/persons/{id} — get person by id
+- POST /api/persons — create a person (JSON body)
+- PUT /api/persons/{id} — update a person (JSON body)
+- DELETE /api/persons/{id} — delete a person
+
+Example create request:
+
+```bash
+curl -X POST http://localhost:8080/api/persons -H "Content-Type: application/json" -d '{"name":"João Silva","email":"joao@example.com","age":30}'
+```
+
+OpenAPI: /openapi (SmallRye OpenAPI)
+
+Running locally:
+
+1. Ensure a MongoDB instance is reachable at the connection string defined in `src/main/resources/application.properties` (default mongodb://localhost:27017).
+2. Start Quarkus in dev mode:
+
+```shell
+./mvnw quarkus:dev
+```
+
+Run tests:
+
+```shell
+./mvnw test
+```
+
+

@@ -1,16 +1,10 @@
+// Deprecated placeholder resource removed. Project now provides a CRUD API under /api/persons
 package br.com.estacio;
 
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.core.MediaType;
-
-@Path("/hello")
+/**
+ * This file was intentionally cleared as part of the project conversion to a CRUD example.
+ * The new REST endpoints live under `br.com.estacio.resource.PersonResource`.
+ */
 public class GreetingResource {
-
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String hello() {
-        return "Hello from Quarkus REST";
-    }
+    // kept for backward compatibility in the source tree; do not use.
 }

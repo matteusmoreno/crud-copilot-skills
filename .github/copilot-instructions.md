@@ -1,0 +1,1 @@
+Read AGENTS.md in the project root before responding to any request in this repository. It contains the architecture guide, coding conventions, testing patterns, and skill references for this codebase.
